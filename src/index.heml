@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/main.css" />
+    <title>Home</title>
+    <import src="./components/route.heml" as="route" />
+    <import src="./components/router.heml" as="router" />
+    <import src="./components/footer.heml" as="footercomp" />
+    <import src="./pages/aboutme.heml" as="aboutme" />
+    <import src="./pages/dashboard.heml" as="dashboard" />
+    <import src="./pages/why-it.heml" as="why-it" />
+    <import src="./pages/home.heml" as="home" />
+</head>
+
+<body>
+    <router>
+        <router:home>
+            <home/>
+        </router:home>
+        <router:404>
+            <h1>
+                Page Can Not Be Found
+            </h1>
+        </router:404>
+        <route name="aboutme">
+            <aboutme />
+        </route>
+        <route name="why-it">
+            <why-it />
+        </route>
+        <route name="dashboard">
+            <dashboard />
+        </route>
+        <!-- <route name="why-it">
+            <whyit navigateFunc="{navigateFunc}" />
+        </route>
+        <route name="dashboard">
+            <dashboard navigateFunc="{navigateFunc}" />
+        </route>
+        <route name="blog">
+            <dashboard navigateFunc="{navigateFunc}" />
+        </route> -->
+    </router>
+
+    <footercomp/>
+</body>
+
+</html>

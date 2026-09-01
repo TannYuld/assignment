@@ -1,0 +1,84 @@
+<!DOCTYPE component>
+<properties>
+</properties>
+<component>
+    <div id="outermost-container">
+        <h1>Home Page</h1>
+        <img src="../img/waltuh.webp" />
+        <h3>Onur Altintas</h3>
+        <h5>Currently a computer enthousiast, aims to be an computer wizard.</h5>
+        <div style="width: 35rem; margin-bottom: 1.5rem;">
+            <div class="divider"></div>
+        </div>
+        <ol class="pages-selection">
+            <li>
+                <a onclick="{window.navigateToPage('aboutme')}">[./aboutme]</a>
+            </li>
+            <li>
+                <a onclick="window.navigateToPage('why-it')">[./why-it]</a>
+            </li>
+            <li>
+                <a onclick="window.navigateToPage('dashboard')">[./dashboard]</a>
+            </li>
+            <li style="width: 4.8rem; display: inline-block; vertical-align: top;" id="easter-egg-container">
+                <a onclick="window.navigateToPage('blog')">[./blog]</a>
+                <span style="font-size: .5rem; display: none;" id="easter-egg">
+                    <br>
+                    <a href="https://onur.altintaslar.tr">[./my_real_blog]</a>
+                </span>
+            </li>
+        </ol>
+    </div>
+
+    <style scoped>
+        a:hover {
+            cursor: pointer;
+        }
+
+        img {
+            width: 600px;
+            height: 400px;
+        }
+    </style>
+
+    <style>
+        @keyframes fadeInSlide {
+            from {
+                opacity: 0;
+                transform: translateY(-5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #easter-egg {
+            animation: fadeInSlide 0.4s ease-out forwards;
+        }
+    </style>
+
+    <script type="module">
+        const easterEggContainer = document.getElementById("easter-egg-container");
+        const easterEggSelf = document.getElementById("easter-egg");
+
+        let mouseStillOver = false;
+
+        easterEggContainer.addEventListener("mouseenter", () => {
+            mouseStillOver = true;
+            setTimeout(countdownForEasteregg, 1000);
+        });
+
+        easterEggContainer.addEventListener("mouseleave", () => {
+            mouseStillOver = false;
+            easterEggSelf.style.display = "none";
+        });
+
+        function countdownForEasteregg() {
+            if (!mouseStillOver) { return; }
+
+            easterEggSelf.style.display = "block";
+        }
+    </script>
+</component>

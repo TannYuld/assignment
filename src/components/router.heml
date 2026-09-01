@@ -1,0 +1,65 @@
+<!DOCTYPE component>
+<properties>
+    <attribute name="homeValue" optional />
+</properties>
+
+<component>
+    <var name="isHome" value="{false}" />
+    <var name="isNotFound" value="{false}" />
+
+    <var name="knownRoutes" value="{new Set()}"/>
+
+    <script>
+        const homeName = homeValue.value ? homeValue.value : 'home';
+
+        const evaluateRouter = (page) => {
+            isHome.value = (page === homeName);
+            
+            if (isHome.value) {
+                isNotFound.value = false;
+                return;
+            }
+
+            queueMicrotask(() => {
+                const exists = knownRoutes.value.has(page);
+                isNotFound.value = !exists;
+            });
+        };
+
+        if (!window.hemlRouterInitialized) {
+            window.addEventListener('popstate', (e) => {
+                const page = (e.state && e.state.page) || new URLSearchParams(window.location.search).get('p') || homeName;
+                evaluateRouter(page);
+                window.dispatchEvent(new CustomEvent('heml-route-change', { detail: page }));
+            });
+
+            const hemlNavigate = (page, extraParams = "") => {
+                const newUrl = `${window.location.pathname}?p=${page}${extraParams}`;
+                window.history.pushState({ page: page }, '', newUrl);
+                evaluateRouter(page);
+                window.dispatchEvent(new CustomEvent('heml-route-change', { detail: page }));
+            };
+
+            window.navigateToPage = hemlNavigate;
+
+            window.hemlRouterInitialized = true;
+        }
+
+        const initialPage = new URLSearchParams(window.location.search).get('p') || homeName;
+        evaluateRouter(initialPage);
+
+        window.addEventListener('heml-route-change', (e) => {
+            evaluateRouter(e.detail);
+        });
+    </script>
+
+    <if condition="{isHome.value}">
+        <children name="home" bind:knownRoutes="{knownRoutes}" />
+    </if>
+    <elseif condition="{isNotFound.value}">
+        <children name="404" bind:knownRoutes="{knownRoutes}" />
+    </elseif>
+    <else>
+        <children bind:knownRoutes="{knownRoutes}" />
+    </else>
+</component>

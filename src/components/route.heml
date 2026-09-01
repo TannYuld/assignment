@@ -1,0 +1,37 @@
+<!DOCTYPE component>
+<properties>
+    <attribute name="name" optional="true" />
+    <attribute name="fallback" optional="true" />
+    <attribute name="knownRoutes" optional="true" />
+</properties>
+
+<component>
+    <var name="isActive" value="{ false }" />
+
+    <script>
+        if (name && name.value) {
+            knownRoutes.value.add(name.value);
+        }
+
+        const evaluateRoute = (currentPage) => {
+            if (fallback && fallback.value) {
+                isActive.value = !knownRoutes.value.has(currentPage);
+            } else {
+                isActive.value = (currentPage === name.value);
+            }
+        };
+
+        queueMicrotask(() => {
+            const current = new URLSearchParams(window.location.search).get('p') || 'home';
+            evaluateRoute(current);
+        });
+
+        window.addEventListener('heml-route-change', (e) => {
+            evaluateRoute(e.detail);
+        });
+    </script>
+
+    <if condition="{isActive.value}">
+        <children />
+    </if>
+</component>

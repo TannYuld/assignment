@@ -1,0 +1,29 @@
+<!DOCTYPE component>
+<properties>
+
+</properties>
+<component>
+    <a id="back-button" onclick="window.navigateToPage('home')" >[&larr; Go back]</a>
+
+    <div id="outermost-container">
+        <h1>Current Status Of My Education</h1>
+        <p class="text-block">
+            In this education year, I need to achive 60 <a href="https://education.ec.europa.eu/education-levels/higher-education/inclusive-and-connected-higher-education/european-credit-transfer-and-accumulation-system">ECT</a>s. In order to do so, I will have to complete my exams, test, team assignments etc.
+            A detailed dashboard of it's current status will be display here. <span class="alt-text">(Which I activly will be updating troughout the year.)</span>
+        </p>
+        <div class="row-container">
+            <h4>Current ECT balance: </h4>
+            <div class="progress-bar">
+                <div></div>
+                <div class="no-fill"></div>
+                <div class="no-fill"></div>
+                <div class="no-fill"></div>
+                <div class="no-fill"></div>
+            </div>
+            <p>[<span class="thin-text">0/60</span>][<span class="thin-text">%0</span>]</p>
+        </div>
+        <div style="width: 50rem;" class="divider vertical-space"></div>
+        <div>
+        </div>
+    </div>
+</component>
