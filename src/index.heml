@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/main.css" />
     <title>Home</title>
+    <link rel="icon" type="image/png" href="../img/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg" />
+    <link rel="shortcut icon" href="../img/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png" />
+    <link rel="manifest" href="../img/site.webmanifest" />
     <import src="./components/route.heml" as="route" />
     <import src="./components/router.heml" as="router" />
     <import src="./components/footer.heml" as="footercomp" />
@@ -18,12 +23,12 @@
 <body>
     <router>
         <router:home>
-            <home/>
+            <home />
         </router:home>
         <router:404>
             <h1 style="text-align: center; margin-top: 5rem; height: calc(100vh - 5rem);">
                 Page Can Not Be Found
-                <br/>
+                <br />
                 <a style="font-size: 1rem;" onclick="window.navigateToPage('home')">[&larr; Go back]</a>
             </h1>
         </router:404>
@@ -38,7 +43,7 @@
         </route>
     </router>
 
-    <footercomp/>
+    <footercomp />
 </body>
 
 </html>

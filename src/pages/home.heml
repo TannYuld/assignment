@@ -5,7 +5,11 @@
 <component>
     <div id="outermost-container">
         <h1>Home Page</h1>
-        <img src="../img/waltuh.webp" />
+        <!-- <img id="waltuh" src="../img/waltuh.webp" /> -->
+        <div id="waltuh-container">
+            <img id="original-waltuh" src="../img/waltuh.webp" />
+            <img src="../img/waltuh-alt.jpg" />
+        </div>
         <h3>Onur Altintas</h3>
         <h5>Currently a computer enthousiast, aims to be an computer wizard.</h5>
         <div style="width: 35rem; margin-bottom: 1.5rem;">
@@ -41,11 +45,25 @@
         #easter-egg {
             animation: fadeInSlide 0.4s ease-out forwards;
         }
+
+        #waltuh-container {
+            display: grid;
+        }
+        #waltuh-container>img {
+            grid-row: 1;
+            grid-column: 1;
+        }
+        #original-waltuh {
+            z-index: 1;
+        }
     </style>
 
     <script type="module">
         const easterEggContainer = document.getElementById("easter-egg-container");
         const easterEggSelf = document.getElementById("easter-egg");
+
+        const waltuhImgContainer = document.getElementById("waltuh-container");
+        const waltuh = document.getElementById("original-waltuh");
 
         let mouseStillOver = false;
 
@@ -57,6 +75,13 @@
         easterEggContainer.addEventListener("mouseleave", () => {
             mouseStillOver = false;
             easterEggSelf.style.display = "none";
+        });
+
+        waltuhImgContainer.addEventListener("mouseenter", () => {
+            waltuh.style.zIndex = -1;
+        });
+        waltuhImgContainer.addEventListener("mouseleave", () => {
+            waltuh.style.zIndex = 1;
         });
 
         function countdownForEasteregg() {

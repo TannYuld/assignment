@@ -4,43 +4,67 @@
 </properties>
 <component>
     <footer>
-        <div id="footer-left">
-            In assosication with:
-            <br/>
-            <a href="https://hz.nl">
-                <img style="width: 10rem;" src="../img/hz.png" alt="HZ Logo"/>
-            </a>
+        <div class="top">
+            <div class="left">
+                In assosication with:
+                <br/>
+                <a href="https://hz.nl">
+                    <img style="width: 10rem;" src="../img/hz.png" alt="HZ Logo"/>
+                </a>
+            </div>
+            
+            <div class="right">
+                <div style="margin: auto;">
+                    <navigation-menu />
+                </div>
+            </div>
         </div>
-        
-        <div id="footer-right">
-            <navigation-menu />
-            <!-- <div>K</div> -->
+
+        <div class="externals">
+            <p>
+                External (& Useful) Links:
+            </p>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/HZ-HBO-ICT">HZ Github Page</a>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://learn.hz.nl">HZ Learn Enviroment</a>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://hz.reader.docfield.com/">The HZ ICT Course and Examination Regulations (CER)</a>
+            <br/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://hz.nl/uploads/documents/1.4-Over-de-HZ/1.4.3.-Regelingen-en-documenten/NL/6.-Overige-regelingen/Overig/rfc2350-hz-csirt-20160610.pdf">The Implementation Regulations (IR) of the HZ ICT programme</a>
         </div>
     </footer>
 
     <style scoped>
         footer {
-            background-color: var(--bg-color-dark);
             padding: 5rem 5rem;
             display: flex;
-            flex-direction: row;
-            gap: 2rem;
+            flex-direction: column;
+            gap: .5rem;
+            background-color: var(--bg-color-dark);
         }
 
         footer img {
             background-color: transparent;
         }
 
-        #footer-left {
+        footer>.top {
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+        }
+
+        footer .left {
             text-align: center;
         }
 
-        #footer-right {
+        footer .right {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
             flex-grow: 1;
+        }
+
+        footer>.externals {
+            margin-top: 4rem;
+
         }
     </style>
 </component>
