@@ -1,11 +1,46 @@
 <!DOCTYPE component>
+<import src="../components/navigation.heml" as="navigation-menu"/>
 <properties>
-
 </properties>
 <component>
-    Footer
+    <footer>
+        <div id="footer-left">
+            In assosication with:
+            <br/>
+            <a href="https://hz.nl">
+                <img style="width: 10rem;" src="../img/hz.png" alt="HZ Logo"/>
+            </a>
+        </div>
+        
+        <div id="footer-right">
+            <navigation-menu />
+            <!-- <div>K</div> -->
+        </div>
+    </footer>
 
     <style scoped>
-        
+        footer {
+            background-color: var(--bg-color-dark);
+            padding: 5rem 5rem;
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+        }
+
+        footer img {
+            background-color: transparent;
+        }
+
+        #footer-left {
+            text-align: center;
+        }
+
+        #footer-right {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            flex-grow: 1;
+        }
     </style>
 </component>

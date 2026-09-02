@@ -1,0 +1,83 @@
+<!DOCTYPE component>
+<properties>
+
+</properties>
+<component>
+    <script>
+        window.addEventListener('route-change', (page) => {
+            currentPage.value = page.detail;
+        });
+    </script>
+
+    <var name="switchPage" value="{
+        (pageVal) => {
+            window.navigateToPage(pageVal);
+            window.scrollTo(0, 0);
+        }
+    }" />
+    <var name="currentPage" value="home" />
+    
+    <ol class="pages-selection">
+        <li>
+            <a onclick="{(switchPage.value)('aboutme')}">
+                <if condition="{currentPage.value === 'aboutme'}">
+                    [[./aboutme]]
+                </if>
+                <else>
+                    [./aboutme]
+                </else>
+            </a>
+        </li>
+        <li>
+            <a onclick="{(switchPage.value)('why-it')}">
+                <if condition="{currentPage.value === 'why-it'}">
+                    [[./why-it]]
+                </if>
+                <else>
+                    [./why-it]
+                </else>
+            </a>
+        </li>
+        <li>
+            <a onclick="{(switchPage.value)('dashboard')}">
+                <if condition="{currentPage.value === 'dashboard'}">
+                    [[./dashboard]]
+                </if>
+                <else>
+                    [./dashboard]
+                </else>
+            </a>
+        </li>
+        <li style="width: 4.8rem; display: inline-block; vertical-align: top;" id="easter-egg-container">
+            <a onclick="(switchPage.value)('blog')">
+                <if condition="{currentPage.value === 'blog'}">
+                    [[./blog]]
+                </if>
+                <else>
+                    [./blog]
+                </else>
+            </a>
+            <span style="font-size: .5rem; display: none;" id="easter-egg">
+                <br>
+                <a href="https://onur.altintaslar.tr">[./my_real_blog]</a>
+            </span>
+        </li>
+    </ol>
+
+    <style scoped>
+        a:hover {
+            cursor: pointer;
+        }
+
+        .pages-selection {
+            display: flex;
+            gap: 3rem;
+            font-size: 1rem;
+            flex-wrap: nowrap;
+        }
+
+        .pages-selection>li>a {
+            text-wrap: nowrap;
+        }
+    </style>
+</component>

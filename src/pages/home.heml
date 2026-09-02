@@ -1,4 +1,5 @@
 <!DOCTYPE component>
+<import src="../components/navigation.heml" as="navigation"/>
 <properties>
 </properties>
 <component>
@@ -10,24 +11,7 @@
         <div style="width: 35rem; margin-bottom: 1.5rem;">
             <div class="divider"></div>
         </div>
-        <ol class="pages-selection">
-            <li>
-                <a onclick="{window.navigateToPage('aboutme')}">[./aboutme]</a>
-            </li>
-            <li>
-                <a onclick="window.navigateToPage('why-it')">[./why-it]</a>
-            </li>
-            <li>
-                <a onclick="window.navigateToPage('dashboard')">[./dashboard]</a>
-            </li>
-            <li style="width: 4.8rem; display: inline-block; vertical-align: top;" id="easter-egg-container">
-                <a onclick="window.navigateToPage('blog')">[./blog]</a>
-                <span style="font-size: .5rem; display: none;" id="easter-egg">
-                    <br>
-                    <a href="https://onur.altintaslar.tr">[./my_real_blog]</a>
-                </span>
-            </li>
-        </ol>
+        <navigation />
     </div>
 
     <style scoped>

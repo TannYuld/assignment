@@ -21,8 +21,10 @@
             <home/>
         </router:home>
         <router:404>
-            <h1>
+            <h1 style="text-align: center; margin-top: 5rem; height: calc(100vh - 5rem);">
                 Page Can Not Be Found
+                <br/>
+                <a style="font-size: 1rem;" onclick="window.navigateToPage('home')">[&larr; Go back]</a>
             </h1>
         </router:404>
         <route name="aboutme">
@@ -34,15 +36,6 @@
         <route name="dashboard">
             <dashboard />
         </route>
-        <!-- <route name="why-it">
-            <whyit navigateFunc="{navigateFunc}" />
-        </route>
-        <route name="dashboard">
-            <dashboard navigateFunc="{navigateFunc}" />
-        </route>
-        <route name="blog">
-            <dashboard navigateFunc="{navigateFunc}" />
-        </route> -->
     </router>
 
     <footercomp/>

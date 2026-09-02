@@ -2,6 +2,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
     --bg-color: #0d0d0d;
+    --bg-color-dark: #000000;
     --bg-alt-color: #2D2D2D;
 
     --text-color: #cccccc;
@@ -18,12 +19,15 @@
 * {
     padding: 0px;
     margin: 0px;
-    background-color: var(--bg-color);
     color: var(--text-color);
     font-family: var(--font);
     font-optical-sizing: auto;
     font-style: normal;
     list-style-type: none;
+}
+
+body {
+    background-color: var(--bg-color);
 }
 
 a {
@@ -32,7 +36,8 @@ a {
 }
 
 a:hover {
-    color: var(--accent-alt-color)
+    color: var(--accent-alt-color);
+    cursor: pointer;
 }
 
 code {
@@ -52,6 +57,8 @@ code {
     width: 100%;
     gap: 1rem;
     margin-top: 3rem;
+    min-height: calc(100vh - 3rem);
+    margin-bottom: 5rem;
 }
 
 #back-button {
@@ -102,12 +109,6 @@ code {
 
 .styled-list li {
     list-style-type: disc !important;
-}
-
-.pages-selection {
-    display: flex;
-    gap: 3rem;
-    font-size: 1rem;
 }
 
 .general-list {
