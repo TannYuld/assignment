@@ -5,10 +5,9 @@
 <component>
     <div id="outermost-container">
         <h1>Home Page</h1>
-        <!-- <img id="waltuh" src="../img/waltuh.webp" /> -->
         <div id="waltuh-container">
-            <img id="original-waltuh" src="../img/waltuh.webp" />
-            <img src="../img/waltuh-alt.jpg" />
+            <img id="original-waltuh" src="/img/waltuh.webp" />
+            <img src="/img/waltuh-alt.jpg" />
         </div>
         <h3>Onur Altintas</h3>
         <h5>Currently a computer enthousiast, aims to be an computer wizard.</h5>
