@@ -1,0 +1,37 @@
+<!DOCTYPE component>
+<properties>
+    <attribute name="post" />
+    <attribute name="postIdx" />
+</properties>
+<component>
+    <a>
+        <div class="container" onclick="window.navigateToPage('post', `&post=${postIdx.value}`)">
+            <h4 class="title">
+                <value name="{post.value.title}"/>
+            </h4>
+            <p class="alt-text">
+                Tags:<value name="{() => post.value.tags.join(', ')}" />
+            </p>
+            <p class="content">
+                <value name="{() => post.value.content.slice(0, 146)}" />
+                <if condition="{post.value.content.length >= 146}">
+                    ...
+                </if>
+            </p>
+            <a class="no-hover">
+                &nbsp;&nbsp;Read more.
+            </a>
+        </div>
+    </a>
+
+    <style>
+        .container {
+            padding: 2rem;
+        }
+
+        .container:hover {
+            background-color: var(--bg-alt-color);
+            cursor: pointer;
+        }
+    </style>
+</component>

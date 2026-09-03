@@ -1,1 +1,3 @@
 .hotplate/*
+/node_modules
+bun.lock

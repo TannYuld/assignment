@@ -1,0 +1,66 @@
+<!DOCTYPE component>
+<import src="../components/back-button.heml" as="back-button" />
+<properties>
+    <attribute name="allPosts" />
+</properties>
+<component>
+    <var name="selectedBlogPost" value="{null}" />
+
+    <script async type="module">
+        function RetrieveBlogPosts() {
+            if (allPosts.value.length === 0) { return; }
+    
+            const queryStringInAsyncBlock = window.location.search;
+            const urlParamsInAsyncBlock = new URLSearchParams(queryStringInAsyncBlock);
+            const blogpostIdx = urlParamsInAsyncBlock.get('post');
+    
+            const currentPost = allPosts.value[blogpostIdx];
+    
+            if (currentPost && currentPost !== null) {
+                selectedBlogPost.value = currentPost;
+            }
+        }
+
+        RetrieveBlogPosts();
+        allPosts.addSubscriber(RetrieveBlogPosts);
+    </script>
+
+    <div id="outermost-container">
+        <back-button goBackFunc="{() => window.navigateToPage('blog')}" />
+        <if condition="{selectedBlogPost.value}">
+            <br />
+            <br />
+            <h1>
+                <value name="{selectedBlogPost.value.title}" />
+            </h1>
+            <h6>
+                Tags:
+                <value name="{() => selectedBlogPost.value.tags.join(', ')}" />
+            </h6>
+            <h6>
+                <value name="{() => 
+                    selectedBlogPost.value.date.toLocaleDateString('en-NL',{
+                        day: '2-digit',
+                        month: 'long',
+                        year: 'numeric'
+                    })}" />
+            </h6>
+            <div style="width: 45rem;" class="divider space-between"/>
+            <article id="article">
+                <script>
+                    const article = document.getElementById('article');
+                    article.innerHTML = selectedBlogPost.value.content;
+                </script>
+            </article>
+        </if>
+        <else>
+            No Item Found
+        </else>
+    </div>
+
+    <style scoped>
+        h1 {
+            max-width: 45rem;
+        }
+    </style>
+</component>

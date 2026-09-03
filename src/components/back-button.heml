@@ -1,9 +1,19 @@
 <!DOCTYPE component>
 <properties>
-
+    <attribute name="goBackFunc" optional/>
 </properties>
 <component>
-    <a class="back-button" onclick="window.navigateToPage('home')">[&larr; Go back]</a>
+    <var name="navigateToHome" value="{false}"/>
+    <if condition="{navigateToHome.value === true}">
+        <a class="back-button" onclick="window.navigateToPage('home')">[&larr; Go back]</a>
+    </if>
+    <else>
+        <a class="back-button" onclick="(goBackFunc.value)()">[&larr; Go back]</a>
+    </else>
+
+    <script>
+        navigateToHome.value = history.state === null || goBackFunc.value === undefined;
+    </script>
 
     <style scoped>
         .back-button {

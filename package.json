@@ -1,0 +1,19 @@
+{
+  "name": "assignment_1",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"bun build ./src/script/*.ts --outdir ./script/ --watch\" \"hemlc ./src/index.heml --out ./index.html --watch\""
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "concurrently": "^10.0.5"
+  },
+  "peerDependencies": {
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "@tannyuld/ridbf": "^0.0.1"
+  }
+}

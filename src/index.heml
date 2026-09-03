@@ -17,6 +17,8 @@
     <import src="./components/footer.heml" as="footercomp" />
 
     <import src="./pages/aboutme.heml" as="page:aboutme" />
+    <import src="./pages/blog.heml" as="page:blog" />
+    <import src="./pages/post.heml" as="page:post" />
     <import src="./pages/dashboard.heml" as="page:dashboard" />
     <import src="./pages/why-it.heml" as="page:why-it" />
     <import src="./pages/home.heml" as="page:home" />
@@ -24,6 +26,8 @@
 </head>
 
 <body>
+    <var name="blogPosts" value="{[]}"/>
+
     <router>
         <router:home>
             <page:home />
@@ -40,9 +44,22 @@
         <route name="dashboard">
             <page:dashboard />
         </route>
+        <route name="blog">
+            <page:blog allBlogs="{blogPosts}" />
+        </route>
+        <route name="post">
+            <page:post allPosts="{blogPosts}"/>
+        </route>
     </router>
 
     <footercomp />
+
+    <script async type="module">
+        const { retrieveData, fetchDataIfIntegrityNotMatch } = await import('./script/main.js');
+
+        blogPosts.value = retrieveData();
+        blogPosts.value = await fetchDataIfIntegrityNotMatch();
+    </script>
 </body>
 
 </html>
