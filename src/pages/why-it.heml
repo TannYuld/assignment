@@ -1,11 +1,11 @@
 <!DOCTYPE component>
+<import src="../components/back-button.heml" as="back-button"/>
 <properties>
 
 </properties>
 <component>
-    <a id="back-button" onclick="window.navigateToPage('home')" >[&larr; Go back]</a>
-
     <div id="outermost-container">
+        <back-button/>
         <h1>Why IT?</h1>
         <h3>Why do I think that this course is perfect match for me.</h3>
         <p class="text-block">

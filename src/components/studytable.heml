@@ -1,0 +1,108 @@
+<!DOCTYPE component>
+<properties>
+
+</properties>
+<component>
+    <table>
+        <tr>
+            <th>
+                Quarter
+            </th>
+            <th>
+                Course
+            </th>
+            <th>
+                EC
+            </th>
+            <th>
+                Exam
+            </th>
+        </tr>
+        <tr>
+            <td rowspan="4">1</td>
+            <td>Programme- & Career Orientation</td>
+            <td>0/5</td>
+            <td>TOETS01 (VT) [HDY]</td>
+        </tr>
+        <tr>
+            <td>Programming Basics</td>
+            <td>0/5</td>
+            <td>TOETS01 (VT) [HDY]</td>
+        </tr>
+        <tr>
+            <td>Computer Science Basics</td>
+            <td>0/5</td>
+            <td>TOETS01 (VT) [HDY]</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Object Oriented Programming</td>
+            <td rowspan="2">0/5</td>
+            <td rowspan="2">TOETS01 (VT) [HDY]</td>
+        </tr>
+        <tr>
+            <td rowspan="3">2</td>
+        </tr>
+        <tr>
+            <td>Agile and Team Management</td>
+            <td>0/5</td>
+            <td>TOETS01 (VT) [HDY]</td>
+        </tr>
+        <tr>
+            <td>Foundations</td>
+            <td>0/5</td>
+            <td>TOETS01 (VT) [HDY]</td>
+        </tr>
+        <tr>
+            <td rowspan="3">3</td>
+            <td>Software Engineering Basics</td>
+            <td>0/5</td>
+            <td>TOETS01 (VT) [HDY]</td>
+        </tr>
+        <tr>
+            <td>Foundations of Data</td>
+            <td>0/5</td>
+            <td>TOETS01 (VT) [HDY]</td>
+        </tr>
+        <tr>
+            <td>Requirements Modelling</td>
+            <td>0/5</td>
+            <td>TOETS01 (VT) [HDY]</td>
+        </tr>
+        <tr>
+            <td rowspan="3">4</td>
+            <td>Web Application Development</td>
+            <td>0/5</td>
+            <td>TOETS01 (VT) [HDY]</td>
+        </tr>
+        <tr>
+            <td>Data Science Basics</td>
+            <td>0/5</td>
+            <td>TOETS01 (VT) [HDY]</td>
+        </tr>
+        <tr>
+            <td>Project: Applied Client Solutions</td>
+            <td>0/5</td>
+            <td>TOETS01 (VT) [HDY]</td>
+        </tr>
+    </table>
+
+    <style scoped>
+        table {
+            border-collapse: collapse;
+        }
+
+        table th,
+        td {
+            padding: 1rem 1rem;
+            max-width: 20rem;
+        }
+
+        table tr:nth-child(1) {
+            border-bottom: 3px solid var(--text-alt-color);
+        }
+
+        table tr {
+            border-bottom: 1px solid var(--text-alt-color);
+        }
+    </style>
+</component>

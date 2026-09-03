@@ -1,11 +1,11 @@
 <!DOCTYPE component>
-
+<import src="../components/back-button.heml" as="back-button"/>
 <properties>
 
 </properties>
 <component>
-    <a id="back-button" onclick="window.navigateToPage('home')" >[&larr; Go back]</a>
     <div id="outermost-container">
+        <back-button/>
         <h1>Who Am I?</h1>
         <p>
             My name is Onur Altintas. But you can call me Gus Fring <span class="alt-text"><br />And don't worry Im not a DEA agent.</span>

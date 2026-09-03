@@ -1,0 +1,23 @@
+<!DOCTYPE component>
+<properties>
+
+</properties>
+<component>
+    <h1>
+        Page Can Not Be Found
+        <br />
+        <a onclick="window.navigateToPage('home')">[./home]</a>
+    </h1>
+
+    <style scoped>
+        h1 {
+            text-align: center;
+            margin-top: 5rem;
+            height: calc(100vh - 5rem);
+        }
+
+        a {
+            font-size: 1rem;
+        }
+    </style>
+</component>

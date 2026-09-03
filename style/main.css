@@ -11,10 +11,9 @@
     --accent-color: #e0a030;
     --accent-alt-color: #91661d;
 
-    /* --font: "Manrope", sans-serif; */
     font-family: "Courier Prime", monospace;
+    /* font-family: "Courier New", Courier, monospace */
 }
-
 
 * {
     padding: 0px;
@@ -33,6 +32,10 @@ body {
 a {
     color: var(--accent-color);
     text-decoration: none;
+}
+
+a span {
+    color: var(--accent-color);
 }
 
 a:hover {
@@ -61,16 +64,6 @@ code {
     margin-bottom: 5rem;
 }
 
-#back-button {
-    position: absolute;
-    left: 5rem;
-    top: 2rem;
-}
-
-#back-button:hover {
-    cursor: pointer;
-}
-
 .divider {
     height: 1px;
     width: 100%;
@@ -87,6 +80,10 @@ code {
     font-style: italic;
     font-size: 0.7rem;
     color: var(--text-alt-color);
+}
+
+.bold-text {
+    font-weight: bold;
 }
 
 .thin-text {

@@ -1,6 +1,6 @@
 <!DOCTYPE component>
 <properties>
-
+    <attribute name="hasEasterEgg" optional />
 </properties>
 <component>
     <script>
@@ -16,12 +16,14 @@
         }
     }" />
     <var name="currentPage" value="home" />
-    
+
     <ol class="pages-selection">
         <li>
             <a onclick="{(switchPage.value)('aboutme')}">
                 <if condition="{currentPage.value === 'aboutme'}">
-                    [[./aboutme]]
+                    <span class="bold-text">
+                        [[./aboutme]]
+                    </span>
                 </if>
                 <else>
                     [./aboutme]
@@ -31,7 +33,9 @@
         <li>
             <a onclick="{(switchPage.value)('why-it')}">
                 <if condition="{currentPage.value === 'why-it'}">
-                    [[./why-it]]
+                    <span class="bold-text">
+                        [[./why-it]]
+                    </span>
                 </if>
                 <else>
                     [./why-it]
@@ -41,29 +45,43 @@
         <li>
             <a onclick="{(switchPage.value)('dashboard')}">
                 <if condition="{currentPage.value === 'dashboard'}">
-                    [[./dashboard]]
+                    <span class="bold-text">
+                        [[./dashboard]]
+                    </span>
                 </if>
                 <else>
                     [./dashboard]
                 </else>
             </a>
         </li>
-        <li style="width: 4.8rem; display: inline-block; vertical-align: top;" id="easter-egg-container">
+        <li style="width: 4.8rem; display: inline-block; vertical-align: top;" class="easter-egg-container">
             <a onclick="(switchPage.value)('blog')">
                 <if condition="{currentPage.value === 'blog'}">
-                    [[./blog]]
+                    <span class="bold-text">
+                        [[./blog]]
+                    </span>
                 </if>
                 <else>
                     [./blog]
                 </else>
             </a>
-            <span style="font-size: .5rem; display: none;" id="easter-egg">
+            <span style="font-size: .5rem;" class="easter-egg">
                 <br>
                 <a href="https://onur.altintaslar.tr">[./my_real_blog]</a>
             </span>
         </li>
     </ol>
 
+    <if condition="{hasEasterEgg && hasEasterEgg.value === true}">
+        <style scoped>
+            .easter-egg-container:hover>.easter-egg {
+                animation: fadeInSlide 0.4s ease-out forwards;
+                animation-delay: 5s;
+                transition-delay: 4.9s;
+                display: block;
+            }
+        </style>
+    </if>
     <style scoped>
         a:hover {
             cursor: pointer;
@@ -79,5 +97,25 @@
         .pages-selection>li>a {
             text-wrap: nowrap;
         }
+
+        .easter-egg-container>.easter-egg {
+            opacity: 0;
+            display: none;
+        }
+    </style>
+    <style>
+        @keyframes fadeInSlide {
+            from {
+                opacity: 0;
+                transform: translateY(-5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        ;
     </style>
 </component>

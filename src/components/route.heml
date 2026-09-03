@@ -26,7 +26,7 @@
             evaluateRoute(current);
         });
 
-        window.addEventListener('heml-route-change', (e) => {
+        window.addEventListener('route-change', (e) => {
             evaluateRoute(e.detail);
         });
     </script>

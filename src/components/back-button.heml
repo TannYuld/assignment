@@ -1,0 +1,19 @@
+<!DOCTYPE component>
+<properties>
+
+</properties>
+<component>
+    <a class="back-button" onclick="window.navigateToPage('home')">[&larr; Go back]</a>
+
+    <style scoped>
+        .back-button {
+            position: absolute;
+            left: 5rem;
+            top: 2rem;
+        }
+
+        .back-button:hover {
+            cursor: pointer;
+        }
+    </style>
+</component>
