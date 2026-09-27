@@ -70,6 +70,10 @@ code {
 
 #article {
     max-width: 45rem;
+    display: block;
+}
+
+#article>p{
     text-align: justify;
 }
 

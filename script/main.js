@@ -79,13 +79,13 @@ async function loadFile(filePath, cacheType) {
   }
 }
 var CacheType;
-(function(CacheType2) {
-  CacheType2["Default"] = "default";
-  CacheType2["ForceCache"] = "force-cache";
-  CacheType2["NoCache"] = "no-cache";
-  CacheType2["NoStore"] = "no-store";
-  CacheType2["OnlyIfCached"] = "only-if-cached";
-  CacheType2["Reload"] = "reload";
+(function(CacheType) {
+  CacheType["Default"] = "default";
+  CacheType["ForceCache"] = "force-cache";
+  CacheType["NoCache"] = "no-cache";
+  CacheType["NoStore"] = "no-store";
+  CacheType["OnlyIfCached"] = "only-if-cached";
+  CacheType["Reload"] = "reload";
 })(CacheType || (CacheType = {}));
 
 class RIDBHandle {
@@ -228,7 +228,7 @@ class RIDBHandle {
     if (!db.objectStoreNames.contains(this.getDataPath())) {
       const store = db.createObjectStore(this.getDataPath(), { keyPath: "id", autoIncrement: true });
       this.schema.forEach((field) => {
-        if (typeof field === "object") {
+        if (typeof field === typeof {}) {
           const fieldName = Object.keys(field)[0];
           const fieldParameters = field[fieldName];
           store.createIndex(fieldName, fieldName, fieldParameters);
@@ -309,7 +309,7 @@ async function fetchDataIfIntegrityNotMatch() {
   return result;
 }
 export {
-  retrieveData,
+  BlogPostSchema,
   fetchDataIfIntegrityNotMatch,
-  BlogPostSchema
+  retrieveData
 };

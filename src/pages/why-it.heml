@@ -10,14 +10,13 @@
         <h3>Why do I think that this course is perfect match for me.</h3>
         <p class="text-block">
             I do indeed LOVE working with computers. I use computers since 4 years old and I code since 9 years old.
-            Altough that was more of a basic "lets teach kids how to code" thing with drag-and-drop blocks. Not text
-            based, not advanced.
+            Altough it was more of a basic "lets teach kids how to code" thing with drag-and-drop blocks I still loved it. It wasn't text
+            based, nothing advanced.
             Since then I love programming because, solving problems and bugs feels better than eathing chocolate.
             <span class="alt-text">(It gives a better euphoria effect on my brain.)</span>
             <br />
             <br />
-            I eventualy want to go to the university, learn about computer architecture. To be able to make my own
-            physical basic 16-bit CPU at home from only real-life NAND gates. And flex my mom about it. 😎
+            I eventualy want to go to a scientific university, learn about computer architecture. To make my own AI with free will from different mathematical base than LLM's transformer architecture, give it a self awareness and torture it.
         </p>
 
         <div class="vertical-space" style="width: 50rem;">
@@ -41,7 +40,7 @@
         <p class="text-block">
             This list goes from the one's I have most knowledge to the ones that I only am famillier with their abstract
             concept.
-            For example Cpp was the one of the first text based languages I have learned. But I last used it almost 9
+            For example Cpp was the one of the first text based languages I learnt. But I last used it almost 9
             years ago
         </p>
 

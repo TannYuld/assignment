@@ -1,11 +1,51 @@
 Goals SWOT analysis
 2026-9-3
-[agile,SWOT,useless]
-Hey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey heyHey hey
-Direction - where you see yourself in the future
+[agile,SWOT,self-reflection]
+<h3>My Strengths</h3>
+<p>[\]
+- I think one of my strongest points is that I can work for hours non-stop if I find something interesting or enjoyable. Regardless of how difficult a task is, I can push through and get it done.[\]
+<br/><br/>[\]
+- Furthermore, my deep passion for and curiosity about computers is a major strength.[\]
+<br/><br/>[\]
+- Lastly, I am a fast learner when I find a topic engaging.[\]
+[\]
+</p>[\]
+<br/><br/><br/>[\]
+<h3>My Weaknesses</h3>[\]
+<p>[\]
+- I struggle to function optimally within a team due to a lack of strong communication skills.[\]
+<br/><br/>[\]
+- I also find it difficult to concentrate on tasks that don't interest me at all. It is very hard for me to learn and work under those conditions, it costs me three times as much effort and time to achieve the same result as someone else.[\]
+[\]
+</p>[\]
+<br/><br/><br/>[\]
+<h3>My Opportunities</h3>[\]
+<p>[\]
+- Because I learn quickly and love doing so, I can always stay up-to-date with new developments in the industry.[\]
+<br/><br/>[\]
+- I can thrive in rapid-prototyping and R&D environments.[\]
+<br/><br/>[\]
+</p>[\]
+<br/><br/><br/>[\]
+<h3>My Threats</h3>[\]
+<p>[\]
+- My low tolerance for heavy bureaucracy and office politics means that highly traditional corporate environments are a risk to my productivity. I prefer to focus strictly on technical problem-solving rather than business-related tasks.[\]
+<br/><br/>[\]
+- Furthermore, while I have a theoretical and hands-on background in Agile/Scrum (including a certification), the constant interruptions of daily stand-ups, pair-programming, and backlog meetings threaten to drain my energy and disrupt my ability to do deep, focused work.[\]
+<br/><br/>[\]
+- Finally, while my ability to hyper-focus is a strength, I sometimes lose track of time. Accumulated overworking on the same subject frequently pushes me toward burnout, leaving me completely unmotivated.</p>[\]
+Direction - where do you see yourself in the future
 2026-9-4
 [future,plan]
-Content content
+<p>
+I have always wanted to be a scientist. I grew up admiring the cool scientists in white lab coats in movies and TV series <span class="alt-text">(especially the "mad scientist" types)</span>. After discovering my deep passion for computers, I knew I wanted to become a research-focused computer scientist.[\]
+<br/><br/><br/>[\]
+My ultimate goal is to become an academic computer science researcher. I want to understand the deep, underlying mechanics of technology, like how a <code>HashSet</code> actually functions under the hood, rather than just using one to build a corporate application. I want to know exactly how a CPU works at a fundamental level, rather than just being an end-user. <span class="alt-text">(Or end-developer in this case)</span>[\]
+<br/><br/><br/>[\]
+My concrete plan for the future is to successfully complete my propaedeutic year (propedeuse) at HZ University of Applied Sciences, and then transfer to the Computer Science bachelor's program at TU Delft. After graduating from TU Delft within three years, my goal is to climb the academic ladder until I earn a PhD in Computer Science.[\]
+<br/><br/><br/>[\]
+I plan to specialize in one or more of the following subjects: Cryptography, AI, Systems and Networking, Theory of Computation/Algorithms, or Programming Languages and Compilers. Currently, I am highly interested in specializing in Neuromorphic computing using memristors, with the intention of dedicating my research to that specific field.[\]
+</p>[\]
 Programming experience
 2026-9-4
 [d]
