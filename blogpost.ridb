@@ -49,4 +49,17 @@ I plan to specialize in one or more of the following subjects: Cryptography, AI,
 Programming experience
 2026-9-4
 [d]
-Hol Hol!
+<p>My programming journey began with Scratch when I was nine years old. While it was a basic drag-and-drop tool designed to teach kids how to code, I loved creating things so much that I quickly wanted to learn actual programming.</p>
+<br/><br/>[\]
+<p>A couple of months later, I switched to C, where I learned fundamentals like conditional blocks and iterations. However, I hadn't yet grasped advanced concepts like pointer arithmetic, error handling, or function pointers. I then discovered C++, which I read online was essentially "C on steroids", but I struggled to grasp Object-Oriented Programming (OOP) at the time due to its complex and sometimes ambiguous syntax on C++.</p>[\]
+<br/><br/>[\]
+<p>By chance, I came across C# .NET and Windows desktop application development with WinForms when I was 11. C# was the stepping stone I needed to finally understand the core concepts of OOP. I spent years building various Windows desktop applications by following tutorials. Over the years, I expanded my toolset alongside C#, picking up Python, Java, GML, JavaScript/TypeScript, HTML/CSS, and REST APIs.</p>[\]
+<br/><br/>[\]
+<p>Three years ago, when I began my MBO Software Development program here in the Netherlands, the program focused only on Java. After gaining enough knowledge of OOP and spending a lot of time with high-level languages, I felt the urge to dive back into low-level programming, but seriously this time. I tried using C and C++ for real-life projects, but they felt a bit "old and cranky" due to their standard libraries and legacy language features. That is when I discovered Rust. It was love at first sight, and we have been in a healthy relationship ever since.</p>[\]
+<br/><br/>[\]
+<p>I really struggle with completing what I started. Once I figure out the underlying mechanics of a problem, I often move on. Because of this, my backlog consists more of experimental learning projects and cloned programs rather than fully polished applications. However, after getting comfortable with Rust and system-level concepts, I have built a few projects worth mentioning:</p>[\]
+<br/><br/>[\]
+<ul class="left">[\]
+  <li><strong>HEMLC:</strong> A transpiler for HEML.</li>[\]
+  <li><strong>RIDBF:</strong> A highly experimental, read-only data structure and transport library built in and for TypeScript (via NPM).</li>[\]
+</ul>[\]

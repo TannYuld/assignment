@@ -30,21 +30,25 @@
         <if condition="{selectedBlogPost.value}">
             <br />
             <br />
-            <h1>
-                <value name="{selectedBlogPost.value.title}" />
-            </h1>
-            <h6>
-                Tags:
-                <value name="{() => selectedBlogPost.value.tags.join(', ')}" />
-            </h6>
-            <h6>
-                <value name="{() => 
-                    selectedBlogPost.value.date.toLocaleDateString('en-NL',{
-                        day: '2-digit',
-                        month: 'long',
-                        year: 'numeric'
-                    })}" />
-            </h6>
+            <div class="title-section">
+                <h1>
+                    <value name="{selectedBlogPost.value.title}" />
+                </h1>
+                <h6 class="alt-text">
+                    <value name="{() => 
+                        selectedBlogPost.value.date.toLocaleDateString('en-NL',{
+                            day: '2-digit',
+                            month: 'long',
+                            year: 'numeric'
+                        })}" />
+                </h6>
+                <h6>
+                    Tags:
+                    <span class="accent-text">
+                        <value name="{() => selectedBlogPost.value.tags.join(', ')}" />
+                    </span>
+                </h6>
+            </div>
             <div style="width: 45rem;" class="divider space-between"/>
             <article id="article">
                 <script>
@@ -61,6 +65,10 @@
     <style scoped>
         h1 {
             max-width: 45rem;
+        }
+
+        .title-section :nth-child(2) {
+            margin-bottom: .4rem;
         }
     </style>
 </component>

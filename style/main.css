@@ -77,6 +77,14 @@ code {
     text-align: justify;
 }
 
+#article .left{
+    text-align: left;
+}
+
+#article .right{
+    text-align: right;
+}
+
 .divider {
     height: 1px;
     width: 100%;
@@ -93,6 +101,10 @@ code {
     font-style: italic;
     font-size: 0.7rem;
     color: var(--text-alt-color);
+}
+
+.accent-text {
+    color: var(--accent-color);
 }
 
 .bold-text {
